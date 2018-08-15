@@ -180,9 +180,11 @@ each(names, function(item, indice){
 function getUserById(arr, id, cb){
   for(let i = 0; i<arr.length; i++){
     let user = arr[i]
+    if(user.id === id){
      return cb(user);
     }
   }
+}
 
 // Do not edit the code below.
 var users = [
